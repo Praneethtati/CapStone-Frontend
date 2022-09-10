@@ -1,0 +1,31 @@
+
+<h1> Medicine List </h1>
+<br>
+
+<div class="container">
+    <button type="submit" (click)="addmed()" class="btn btn-success">Add Medicine </button>
+    </div>
+    <br>
+    <br>
+<table class="table table-bordered table-striped">
+<thead>
+    <tr>
+        <th>Id</th><th>Name</th><th>Category</th><th>Description</th><th>Quantity</th><th>Price</th><th>Delete</th><th>Edit details</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let m of medicine">
+        <td>{{m.id}}</td>
+        <td>{{m.name}}</td>
+        <td>{{m.category}}</td>
+        <td>{{m.drug_description}}</td>
+        <td>{{m.quantity}}</td>
+        <td>{{m.mrp}}</td> 
+        <td><button type="button" (click)='Delete(m.id)' class="btn btn-primary">Delete</button></td>
+        <td><button type="button" (click)='Update(m.id)' class="btn btn-primary">Edit</button></td>
+    </tr>
+</tbody>
+</table>
+<div class="container">
+<button type="submit" (click)="gotousers()" class="btn btn-success">Users Data </button>
+</div>

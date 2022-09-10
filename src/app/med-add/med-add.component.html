@@ -1,0 +1,31 @@
+<div class="container col-md-6">
+    <h1 style="color: red;">Add Medicine</h1>
+     <form (ngSubmit)="medReg()">
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Medicine Id</label>
+         <input type="text" class="form-control" id="medId" name="medId" [(ngModel)]="medicine.id" >
+       </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Name of the Medicine</label>
+         <input type="text" class="form-control" id="medname" name="medname" [(ngModel)]="medicine.name" >
+       </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Category</label>
+         <input type="text" class="form-control" id="cat" name="cat" [(ngModel)]="medicine.category">
+       </div>
+       <div class="mb-3">
+           <label for="exampleFormControlInput1" class="form-label">Quantity</label>
+           <input type="number" class="form-control" id="quant" name="quant" [(ngModel)]="medicine.quantity" >
+         </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Drug Description</label>
+         <input type="text" class="form-control" id="desc" name="desc" [(ngModel)]="medicine.drug_description" >
+       </div>
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="medicine.mrp" >
+      </div>
+       
+     <button type="submit" class="btn btn-primary">Add Medicine</button>
+     </form>
+   </div>

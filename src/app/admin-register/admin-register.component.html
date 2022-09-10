@@ -1,0 +1,29 @@
+<div class="container col-md-6">
+    <h1 style="color: red;">Admin Registration</h1>
+     <form (ngSubmit)="adminReg()">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Admin ID</label>
+            <input type="text" class="form-control" id="adminid" name="adminid" [(ngModel)]="admin.aid" >
+          </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Admin Name</label>
+         <input type="text" class="form-control" id="aname" name="aname" [(ngModel)]="admin.aname" >
+       </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Email</label>
+         <input type="text" class="form-control" id="email" name="email" [(ngModel)]="admin.aemail" placeholder="example@xyz.com">
+       </div>
+       <div class="mb-3">
+         <label for="exampleFormControlInput1" class="form-label">Password</label>
+         <input type="password" class="form-control" id="password" name="password" [(ngModel)]="admin.apassword" >
+       </div>
+       
+     <button type="submit" class="btn btn-primary">Admin Register</button>
+     </form>
+
+
+    </div>
+    <div class="container col-md-6">
+    <p> If already Registered</p>
+      <button type="submit" (click)="login()" class="btn btn-success">Login Here</button>
+     </div>

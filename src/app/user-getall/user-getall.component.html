@@ -1,0 +1,28 @@
+<h1> User List Details </h1>
+<div class="container">
+    <button type="submit" (click)="adduser()" class="btn btn-success">Add User </button>
+    </div>
+    <br>
+    <br>
+<table class="table table-bordered table-striped">
+<thead>
+    <tr>
+        <th>Id</th><th>Name</th><th>Mobile Number</th><th>Email</th><th>Password</th><th>Delete</th><th>Edit details</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let u of user">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.phno}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.password}}</td>
+        <td><button type="button" (click)='Delete(u.id)' class="btn btn-primary">Delete</button></td>
+        <td><button type="button" (click)='Update(u.id)' class="btn btn-primary">Edit</button></td>
+    </tr>
+</tbody>
+
+</table>
+<div class="container">
+    <button type="submit" (click)="getallmed()" class="btn btn-success">Medicines Data</button>
+    </div>
